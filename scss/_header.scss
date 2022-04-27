@@ -1,0 +1,63 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    // background: #2b2b2b;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+
+    .struct{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        .logo{
+            font-size: 20px;
+            display: inline-block;
+            color:$text;
+           
+        }
+
+        .nav{
+            display: block;
+            list-style-type: none;
+            li{
+                display: inline-block;
+                color: $text;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 14px;
+                opacity: 0.6;
+            }
+            .active{
+                opacity: 1;
+            }
+        }
+
+        .tools{
+        display: inline-block;
+        color: $text;
+        .tel{
+            font: normal normal 300 14px/0px Poppins;
+            margin-right: 20px;
+        }
+
+        .social{
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        }
+
+    }
+    
+
+}
+

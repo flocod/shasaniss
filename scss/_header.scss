@@ -1,63 +1,114 @@
-header{
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  // background: #2b2b2b;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  transition: all 0.3s ease;
+  .struct {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 70px;
-    // background: #2b2b2b;
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 999;
+    width: 90%;
 
-    .struct{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
+    .logo {
+      font-size: 1em;
+      display: inline-block;
+      color: $text;
+    }
 
-        .logo{
-            font-size: 20px;
-            display: inline-block;
-            color:$text;
-           
-        }
+    .nav {
+      display: block;
+      list-style-type: none;
 
-        .nav{
-            display: block;
-            list-style-type: none;
-            li{
-                display: inline-block;
-                color: $text;
-                margin-left: 20px;
-                margin-right: 20px;
-                font-size: 14px;
-                opacity: 0.6;
-            }
-            .active{
-                opacity: 1;
-            }
-        }
+      @media all and (max-width: 1168px) {
+        display: none;
+      }
 
-        .tools{
+      li {
         display: inline-block;
         color: $text;
-        .tel{
-            font: normal normal 300 14px/0px Poppins;
-            margin-right: 20px;
-        }
-
-        .social{
-            display: inline-block;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        }
-
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
+        opacity: 0.6;
+      }
+      .active {
+        opacity: 1;
+      }
     }
-    
+
+    .tools {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: $text;
+      .tel {
+        font: normal normal 300 1em/0px Poppins;
+        margin-right: 20px;
+        display: inline-block;
+        @media all and (max-width:677px){
+            display: none;
+        }
+        span{
+            display: inline-block;
+            margin-right: 3px;
+        }
+       
+      }
+
+      .social {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.3em;
+      }
+
+      .btn_menu {
+        display: none;
+        @media all and (max-width: 1168px) {
+          display: inline-block;
+          font-size: 2em;
+          margin-left: 1em;
+          position: relative;
+          z-index: 101;
+        }
+
+        @media all and (max-width: 700px){
+            font-size: 1.5em;
+           
+          }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
+
+.header_active {
+  background: #121318;
+  transition: all 0.3s ease;
+}
+.header_disapear {
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+
+
 

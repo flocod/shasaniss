@@ -53,13 +53,11 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="body">
-    
     <div class="main">
       <!-- enter content -->
 
-
-     
-      <header>
+      <!-- <div class="pointer"></div> -->
+      <header class="header">
         <div class="struct">
           <div class="logo">Logo</div>
 
@@ -72,7 +70,7 @@
           </ul>
 
           <div class="tools">
-            <a class="tel" href="+237697132758">+237 697 132 758</a>
+            <a class="tel" href="+237697132758">  <span><i class="fas fa-headset"></i></span> +237 697 132 758</a>
 
             <span class="social">
               <i class="fab fa-facebook-square"></i>
@@ -83,17 +81,49 @@
             <span class="social">
               <i class="fab fa-whatsapp"></i>
             </span>
+
+            <div class="btn_menu">
+              <i class="fas fa-bars"></i>
+            </div>
+  
           </div>
+
+        
         </div>
+
+       
+
       </header>
 
-      <div class="carouss">
+      <div class="menu_mobile menu_mobile_off"> 
+        <div class="struct">
+          <ol>
+            <li>Acceuil
+              <span class="line active"></span>
+            </li>
+            <li>Services
+              <span class="line"></span>
+            </li>
+            <li>Propos
+              <span class="line"></span>
+            </li>
+            <li>Galerie
+              <span class="line"></span>
+            </li>
+            <li>Contact
+              <span class="line"></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="carouss none">
         <div class="images">
-          <img class=" full_img img1" src="images/img1.png" alt="" />
+          <img class="full_img img1" src="images/img1.png" alt="" />
           <img class="active full_img img2" src="images/img2.png" alt="" />
-          <img class=" full_img img3" src="images/img3.png" alt="" />
+          <img class="full_img img3" src="images/img3.png" alt="" />
           <img class="full_img img4" src="images/img4.png" alt="" />
-          <img class=" full_img img5" src="images/img5.png" alt="" />
+          <img class="full_img img5" src="images/img5.png" alt="" />
         </div>
         <div class="text_carouss">
           <div class="struct">
@@ -114,7 +144,7 @@
                 </span>
                 <div class="btns">
                   <div class="btn active link">Demander un devis</div>
-                  <div class="btn link" >En savoir +</div>
+                  <div class="btn link">En savoir +</div>
                 </div>
               </div>
 
@@ -125,33 +155,394 @@
                 <span class="link indice4"></span>
                 <span class="link indice5"></span>
               </div>
-
-
-             
-
             </div>
           </div>
 
           <div class="scroll_indice link" value="SCROLLEZ">
-                <span class="scroll_anime"></span>
+            <span class="scroll_anime"></span>
           </div>
-
         </div>
       </div>
 
+      <div class="group none">
+        <div class="struct">
+          <div class="text_block">
+            <div class="sub_text">
+              <span class="tiret"></span>
+              <span class="text">QUI SOMMES NOUS ?</span>
+            </div>
+
+            <div class="text1">
+              Des Experts Dans Notre Domaine<span class="point">.</span>
+            </div>
+            <div class="text2">
+              Notre entreprise numérique de professionnels développe des
+              produits depuis 15 ans.
+              <br />
+              <br />
+              Nous avons reçu de nombreuses récompenses pour notre travail et
+              développons des applications qui sont devenues populaires dans le
+              monde. Chaque matin dans notre entreprise commence par un café
+              chaud et un stand-up. La discussion est un élément important dans
+              le processus de développement. Ainsi naissent de nouvelles idées
+              et des solutions ingénieuses. Ensuite, nous nous mettons au
+              travail avec une vigueur et une inspiration renouvelées. On ne
+              s'ennuie jamais.
+            </div>
+            <div class="btn_more link">read more</div>
+          </div>
+        </div>
+
+        <div class="bg_img">
+          <img class="full_img" src="images/intro_pic.png" alt="" />
+        </div>
+      </div>
+
+      <div class="group group_small_padding none">
+        <img class="lines_svg" src="images/lines.svg" alt="" />
+
+        <div class="struct struct_left">
+          <div class="text_block">
+            <div class="sub_text">
+              <span class="tiret"></span>
+              <span class="text">NOS SERVICES</span>
+            </div>
+
+            <div class="text1">
+              Nous Faisons Tout<span class="point">.</span>
+            </div>
+            <div class="text2">
+              Vous pourriez être intéressé par ce que nous pouvons vous offrir.
+              Plus de services que vous pouvez trouver ci-dessous. Nous faisons
+              tout à un niveau élevé.
+            </div>
+            <!-- <div class="btn_more link">
+              read more
+            </div> -->
+          </div>
+
+          <div class="flex_services">
+            <div class="item">
+              <div class="item_icon flex_center">
+                <div class="content_1 flex_center">
+                  <div class="container flex_center">
+                    <i class="fas fa-drafting-compass"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item_titre">CONCEPTION</div>
+
+              <div class="more">read more</div>
+            </div>
+            <div class="item">
+              <div class="item_icon flex_center">
+                <div class="content_1 flex_center">
+                  <div class="container flex_center">
+                    <i class="fas fa-bezier-curve"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item_titre">FABRICATION</div>
+
+              <div class="more">read more</div>
+            </div>
+            <div class="item">
+              <div class="item_icon flex_center">
+                <div class="content_1 flex_center">
+                  <div class="container flex_center">
+                    <i class="fas fa-warehouse"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item_titre">INSTALLATION</div>
+
+              <div class="more">read more</div>
+            </div>
+            <div class="item">
+              <div class="item_icon flex_center">
+                <div class="content_1 flex_center">
+                  <div class="container flex_center">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item_titre">MAINTENANCE</div>
+
+              <div class="more">read more</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group none">
+        <div class="struct struct_left">
+          <div class="text_block">
+            <div class="sub_text">
+              <span class="tiret"></span>
+              <span class="text">COMMENÇONS</span>
+            </div>
+
+            <div class="text1">
+              Obtenez Votre Devis Gratuitement<span class="point">.</span>
+            </div>
+            <div class="text2">
+              Nous essayons toujours de mettre en œuvre nos idées créatives au
+              plus haut niveau. Parlez-nous de votre projet et nous le
+              réaliserons.
+            </div>
+
+            <form action="" class="form_devis">
+              <div class="flex_input">
+                <input
+                  type="text"
+                  placeholder="Entrez votre nom"
+                  class="style_input input_form"
+                />
+                <input
+                  type="tel"
+                  placeholder="Votre Téléphone"
+                  class="style_input input_form"
+                />
+              </div>
+              <div class="flex_input">
+                <input
+                  type="text"
+                  placeholder="Secteur D'activités"
+                  class="style_input input_form"
+                />
+                <input
+                  type="email"
+                  placeholder="Address mail"
+                  class="style_input input_form"
+                />
+              </div>
+              <textarea
+                class="style_input"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Tapez votre message"
+              ></textarea>
+
+              <div class="btn active link">Envoyez</div>
+            </form>
+          </div>
+        </div>
+
+        <div class="bg_img bg_img_right">
+          <img class="full_img" src="images/pharma.png" alt="" />
+        </div>
+      </div>
+
+      <div class="group none">
+        <div class="struct struct_between">
+          <div class="box_numbers">
+            <div class="block_box">
+              <div class="item">
+                <div>
+                  <div class="numb">235</div>
+                  <div class="descr">Clients Satisfaits</div>
+                </div>
+              </div>
+              <div class="item">
+                <div>
+                  <div class="numb">30</div>
+                  <div class="descr">Villes deservies</div>
+                </div>
+              </div>
+            </div>
+            <div class="block_box" >
+              <div class="item">
+                <div>
+                  <div class="numb">15</div>
+                  <div class="descr">Ans d'Expériences</div>
+                </div>
+              </div>
+              <div class="item">
+                <div>
+                  <div class="numb">150</div>
+                  <div class="descr">Entreprises partenaires</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text_block text_block_small">
+            <div class="sub_text">
+              <span class="tiret"></span>
+              <span class="text">QUELQUES MOTS</span>
+            </div>
+
+            <div class="text1">
+              Pourquoi Nous Choisir<span class="point">.</span>
+            </div>
+            <div class="text2">
+              Nous avons reçu de nombreuses récompenses pour nos produits et
+              services qui sont devenus populaires au Cameroun.
+            </div>
+
+            <div class="list_box">
+              <div class="list_item">
+                <div class="ico"><i class="fas fa-check-circle"></i></div>
+                <div class="text">
+                  <b>Technologies Modernes</b> <br />
+                  <div class="descr">
+                    Nous utilisons les dernières technologie pour mettre en
+                    oeuvre nos different projets d'enseignes lumineuse.
+                  </div>
+                </div>
+              </div>
+              <div class="list_item">
+                <div class="ico"><i class="fas fa-check-circle"></i></div>
+                <div class="text">
+                  <b>Énorme Expérience</b> <br />
+                  <div class="descr">
+                    Notre société fabrique des enseignes lumineuses depuis 15
+                    ans. Jusqu'ici nous avons recue de bon retour de la part de
+                    nos clients.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group last_projets none">
+        <div class="struct">
+          <div class="bg_title_group">
+            <div class="text_block">
+              <div class="sub_text">
+                <span class="tiret"></span>
+                <span class="text">NOS PROJETS</span>
+              </div>
+
+              <div class="text1">
+                Nos Derniers Projets<span class="point">.</span>
+              </div>
+              <div class="text2">
+                Nous essayons toujours de mettre en œuvre nos idées créatives au
+                plus haut niveau. Vous pouvez le voir en regardant nos projets
+                récents.
+              </div>
+            </div>
+
+            <div class="btn_more link">VOIR TOUS LES PROJETS</div>
+          </div>
+
+          <div class="flex_projets">
+            <div class="item link">
+              <img class="full_img" src="images/img2.png" alt="" />
+
+              <div class="text_item">
+                <div class="text_item__struct">
+                  <div class="small">Yaoundé</div>
+                  <div class="small">Cameroun</div>
+                  <div class="categori">
+                    <div>Miss Dior</div>
+                    <div><i>Enseignes Led </i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item link">
+              <img class="full_img" src="images/img3.png" alt="" />
+              <div class="text_item">
+                <div class="text_item__struct">
+                  <div class="small">Yaoundé</div>
+                  <div class="small">Cameroun</div>
+                  <div class="categori">
+                    <div>Miss Dior</div>
+                    <div><i>Enseignes Led</i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item link">
+              <img class="full_img" src="images/img1.png" alt="" />
+              <div class="text_item">
+                <div class="text_item__struct">
+                  <div class="small">Yaoundé</div>
+                  <div class="small">Cameroun</div>
+                  <div class="categori">
+                    <div>Miss Dior</div>
+                    <div><i>Enseignes Led</i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer none" >
+          <div class="struct">
+            <div class="item">
+              <div class="logo_footer">
+                shassanis
+              </div>
+              <div class="descr_text">
+                Nous sommes spécialisés dans l'étude, la conception, la fabrication, l'installation et la maintenance d'enseignes lumineuses, de signalétique, d'éclairage néon et Leds. Nous vous invitons à découvrir et partager nos idées en voyageant sur notre site.
+              </div>
+            </div>
+            <div class="item">
+              <div class="title_footer">
+                Adresse:
+              </div>
+              <div class="descr">
+                Douala, Cameroun <br>Yaounde, Cameroun
+              </div>
+            </div>
+            <div class="item">
+              <div class="title_footer">
+                Contacts
+              </div>
+              <div class="descr">
+                <a href="tel:" class="link">+237 697132706</a><br>
+                <a href="mailto:" class="link">email@domain.com</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="title_footer">
+                Suivez nous
+              </div>
+              <div class="socials">
+                
+                <span>
+                  <i class="fab fa-facebook-square"></i>
+                </span>
+                <span>
+                  <i class="fab fa-instagram"></i>
+                </span>
+                <span>
+                  <i class="fab fa-whatsapp"></i>
+                </span>
 
 
 
+              </div>
+            </div>
+          </div>
+          <div class="sign" copyright="Copyright © 2020 shassanis.">
 
+          </div>
+      </footer>
+
+      <div class="cursor"></div>
+      <div class="contain_cursor"></div>
     </div>
 
-         <!-- cursor -->
-         <div class="pointer"></div>
-         <div class="cursor"></div>
-         <span class="contain_cursor">
-         <!-- cursor -->
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
       integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
@@ -159,6 +550,5 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="text/javascript" src="js/main.js"></script>
-
   </body>
 </html>

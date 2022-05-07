@@ -3,8 +3,8 @@ var $cursor = $(".cursor");
 function moveCursor(e) {
   TweenLite.to($cursor, 0.5, {
     css: {
-      left: e.pageX,
-      top: e.pageY,
+      left: e.clientX,
+      top: e.clientY,
       opacity: 1,
     },
   });
@@ -17,8 +17,8 @@ var $contain_cursor = $(".contain_cursor");
 function moveContain_cursor(e) {
   TweenLite.to($contain_cursor, 0.7, {
     css: {
-      left: e.pageX,
-      top: e.pageY,
+      left: e.clientX,
+      top: e.clientY,
     },
   });
 }
@@ -27,10 +27,10 @@ $(window).on("mousemove", moveContain_cursor);
 var $point = $(".pointer");
 
 function movePoint(e) {
-  TweenLite.to($point, 0, {
+  TweenLite.to($point, 0.3, {
     css: {
-      left: e.pageX,
-      top: e.pageY,
+      left: e.clientX,
+      top: e.clientY,
     },
   });
 }
@@ -51,7 +51,7 @@ $(window).on("mousemove", () => {
       border: "none",
     });
   } else {
-    TweenLite.to($point, 0.3, { width: "20px", height: "20px" });
+    TweenLite.to($point, 0.3, { width: "20px", height: "20px","background-color": "white", });
     TweenLite.to($cursor, 0.3, {
       width: "20px",
       height: "20px",
@@ -142,9 +142,9 @@ setInterval(animecarouss, 7000);
 
 // smouth scroling
 
-//      $(window).on('mousewheel DOMMouseScroll', function(e) {
+// $(window).on('mousewheel DOMMouseScroll', function(e) {
 //   var dir,
-//       amt = 100;
+//       amt = 10;
 
 //   e.preventDefault();
 //   if(e.type === 'mousewheel') {
@@ -154,9 +154,10 @@ setInterval(animecarouss, 7000);
 //     dir = e.originalEvent.detail < 0 ? '-=' : '+=';
 //   }
 
-//   $('html, body').stop().animate({
+//   $('html, body').animate({
 //     scrollTop: dir + amt
-//   },500, 'linear');
+//   },1000, 'linear');
+
 // })
 
 
@@ -167,4 +168,58 @@ TweenMax.staggerTo(".scroll_anime",1,{
     ease: Power1.easeInOut,
     yoyo:true,
     repeat:-1,
+});
+
+
+
+
+
+
+// cacher et montrer les elements aux scroll
+
+//  cacher et montrer l'element after du side menu au scroll.......
+let progress_state;
+$(document).ready(function () {
+  totalheight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function () {
+    progress = (window.pageYOffset / totalheight) * 100;
+    progress = Math.round(Number(progress));
+    progress = progress + "%";
+    header = $(".header");
+
+    if (progress_state < progress) {
+      header.addClass("header_active");
+      header.addClass("header_disapear");
+      console.log("scroll to bottom");
+    } else if (window.pageYOffset == 0) {
+      
+      header.removeClass("header_active");
+      if(window.innerWidth>1000){
+        $('.scroll_indice').css('display','flex');
+      }
+      
+    }else if(progress_state > progress){
+      header.removeClass("header_disapear");
+        if(window.innerWidth>1000){
+          $('.scroll_indice').css('display','none');
+        }
+    }
+
+    progress_state = progress;
+  };
+});
+
+$(document).ready(function () {
+   
+    // window.onload=function(){
+    //     $('.menu_mobile').css('height',window.innerHeight+'px');
+    //     console.log( $('.menu_mobile').css('height'));
+    // }
+    // $('.menu_mobile').css('height',window.innerHeight+'px');
+    $('body').on('click','.btn_menu',()=>{
+        $('.menu_mobile').toggleClass('menu_mobile_off');
+    })
+
+  
+
 });

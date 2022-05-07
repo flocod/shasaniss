@@ -13,6 +13,10 @@
     object-fit: cover;
     position: relative;
     overflow: hidden;
+    @media all and (max-width:700px){
+      height: 45%;
+      width: 100%;
+    }
 
     img{
      filter: saturate(180%) brightness(120%);
@@ -41,6 +45,11 @@
     content: " ";
     background: transparent linear-gradient(90deg, #121318 45%, #12131800) 0% 0%
       no-repeat padding-box;
+      @media all and (max-width:700px){
+        height: 80%;
+        background: transparent linear-gradient(0deg, #121318 45%, #12131800) 0% 0%
+        no-repeat padding-box;
+      }
   }
   &:before {
     position: absolute;
@@ -52,6 +61,14 @@
     content: " ";
     background: transparent linear-gradient(90deg, #12131800 45%, #12131800) 0% 0%
       no-repeat padding-box;
+      @media all and (max-width:700px){
+        top: auto;
+        bottom: 0px;
+        height: 100%;
+        transform: translateX(0%) translateY(0%);
+        background: #12131857;
+        z-index: 1;
+      }
   }
 
   .text_carouss {
@@ -63,7 +80,6 @@
     background: rgba(3, 3, 3, 0);
     position: relative;
     z-index: 10;
-
     margin: 0;
     position: absolute;
     top: 0px;
@@ -144,8 +160,8 @@
               font: normal normal bold 3.5em/1.2em Poppins;
             }
             @media all and (max-width:578px){
-              font: normal normal bold 2em/1.5em Poppins;
-              margin-bottom: 5px;
+              font: normal normal 400 2em/1.2em Poppins;
+              margin-bottom: 8px;
               width: 90%;
             }
             &:hover{

@@ -1115,6 +1115,13 @@ header .struct .tools .btn_menu {
   overflow: hidden;
 }
 
+@media all and (max-width: 700px) {
+  .carouss .images {
+    height: 45%;
+    width: 100%;
+  }
+}
+
 .carouss .images img {
   -webkit-filter: saturate(180%) brightness(120%);
           filter: saturate(180%) brightness(120%);
@@ -1152,6 +1159,14 @@ header .struct .tools .btn_menu {
   background: transparent linear-gradient(90deg, #121318 45%, #12131800) 0% 0% no-repeat padding-box;
 }
 
+@media all and (max-width: 700px) {
+  .carouss:after {
+    height: 80%;
+    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(45%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, #121318 45%, #12131800) 0% 0% no-repeat padding-box;
+  }
+}
+
 .carouss:before {
   position: absolute;
   top: 0px;
@@ -1163,6 +1178,18 @@ header .struct .tools .btn_menu {
   content: " ";
   background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, #12131800), to(#12131800)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(90deg, #12131800 45%, #12131800) 0% 0% no-repeat padding-box;
+}
+
+@media all and (max-width: 700px) {
+  .carouss:before {
+    top: auto;
+    bottom: 0px;
+    height: 100%;
+    -webkit-transform: translateX(0%) translateY(0%);
+            transform: translateX(0%) translateY(0%);
+    background: #12131857;
+    z-index: 1;
+  }
 }
 
 .carouss .text_carouss {
@@ -1304,8 +1331,8 @@ header .struct .tools .btn_menu {
 
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text .text1 {
-    font: normal normal bold 2em/1.5em Poppins;
-    margin-bottom: 5px;
+    font: normal normal 400 2em/1.2em Poppins;
+    margin-bottom: 8px;
     width: 90%;
   }
 }

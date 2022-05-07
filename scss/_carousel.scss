@@ -82,6 +82,24 @@
        .contain_text{
            width: 50%;
            margin-top: 50px;
+           @media all and (max-width:1483px){
+            width: 60%;
+          }
+           @media all and (max-width:1006px){
+            width: 80%;
+          }
+          @media all and (max-width:761px){
+            width: 90%;
+          }
+          @media all and (max-width:578px){
+            width: 100%;
+          }
+
+          @media all and (max-width:489px){
+               
+            transform: translateY(40px);
+          }
+
         .sub_text {
             display: inline-flex;
             justify-content: center;
@@ -92,12 +110,18 @@
               height: 0.1em;
               background: #b4b4b4;
               display: inline-block;
+              @media all and (max-width:578px){
+                width: 40px;
+              }
             }
             .text {
               display: inline-block;
               font: normal normal 300 1.2em/0px Poppins;
               color: #b4b4b4;
               margin-left: 10px;
+              @media all and (max-width:578px){
+                font: normal normal 300 1em/0px Poppins;
+              }
             }
           }
           .text1{
@@ -112,9 +136,18 @@
             -webkit-text-stroke-width:2px;
             color: #fffffffb;
             // webkit-text-stroke-width webkit-text-stroke-color
-           
+            @media all and (max-width:1483px){
+              font: normal normal bold 4.5em/1.07em Poppins;
+            }
           
-
+            @media all and (max-width:761px){
+              font: normal normal bold 3.5em/1.2em Poppins;
+            }
+            @media all and (max-width:578px){
+              font: normal normal bold 2em/1.5em Poppins;
+              margin-bottom: 5px;
+              width: 90%;
+            }
             &:hover{
            
               color: #b4b4b400;
@@ -131,12 +164,21 @@
               font: normal normal 300 1.1em/1.5em Poppins;
                 letter-spacing: 0px;
                 color: #B4B4B4;
+                @media all and (max-width:578px){
+                  font: normal normal normal 0.9em/1.5em Poppins;
+                 width: 90%;
+                }
           }
 
           .btns{
             display: flex;
             justify-content: left;
             margin-top: 40px;
+
+            @media all and (max-width:489px){
+            flex-direction: column;
+            width: 100%;
+            }
            
             .btn{
               width: 15em;
@@ -151,6 +193,15 @@
               font: normal normal normal 1.1em Poppins;
               letter-spacing: 0px;
               color: $text;
+              @media all and (max-width:761px){
+                font: normal normal normal 1em Poppins;
+                width:25em;
+              }
+              @media all and (max-width:489px){
+               
+                width: 100%;
+                margin-bottom: 1em;
+              }
             }
 
             .active{

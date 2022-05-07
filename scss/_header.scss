@@ -50,7 +50,7 @@ header {
       color: $text;
       .tel {
         font: normal normal 300 1em/0px Poppins;
-        margin-right: 20px;
+        margin-right: 10px;
         display: inline-block;
         @media all and (max-width:677px){
             display: none;
@@ -67,6 +67,7 @@ header {
         margin-left: 10px;
         margin-right: 10px;
         font-size: 1.3em;
+        line-height: 0px;
       }
 
       .btn_menu {

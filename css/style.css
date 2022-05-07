@@ -186,6 +186,14 @@ a :hover {
   position: absolute;
 }
 
+@media all and (max-width: 500px) {
+  .scroll_indice:after {
+    font: normal normal 200 12px/0px Poppins;
+    -webkit-transform: translateX(-40px) translateY(20px) rotate(-90deg);
+            transform: translateX(-40px) translateY(20px) rotate(-90deg);
+  }
+}
+
 .scroll_indice span {
   position: absolute;
   background-color: white;
@@ -1029,7 +1037,7 @@ header .struct .tools {
 
 header .struct .tools .tel {
   font: normal normal 300 1em/0px Poppins;
-  margin-right: 20px;
+  margin-right: 10px;
   display: inline-block;
 }
 
@@ -1049,6 +1057,7 @@ header .struct .tools .social {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1.3em;
+  line-height: 0px;
 }
 
 header .struct .tools .btn_menu {
@@ -1198,6 +1207,37 @@ header .struct .tools .btn_menu {
   margin-top: 50px;
 }
 
+@media all and (max-width: 1483px) {
+  .carouss .text_carouss .struct .flex .contain_text {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 1006px) {
+  .carouss .text_carouss .struct .flex .contain_text {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 761px) {
+  .carouss .text_carouss .struct .flex .contain_text {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 578px) {
+  .carouss .text_carouss .struct .flex .contain_text {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 489px) {
+  .carouss .text_carouss .struct .flex .contain_text {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
 .carouss .text_carouss .struct .flex .contain_text .sub_text {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1217,11 +1257,23 @@ header .struct .tools .btn_menu {
   display: inline-block;
 }
 
+@media all and (max-width: 578px) {
+  .carouss .text_carouss .struct .flex .contain_text .sub_text .tiret {
+    width: 40px;
+  }
+}
+
 .carouss .text_carouss .struct .flex .contain_text .sub_text .text {
   display: inline-block;
   font: normal normal 300 1.2em/0px Poppins;
   color: #b4b4b4;
   margin-left: 10px;
+}
+
+@media all and (max-width: 578px) {
+  .carouss .text_carouss .struct .flex .contain_text .sub_text .text {
+    font: normal normal 300 1em/0px Poppins;
+  }
 }
 
 .carouss .text_carouss .struct .flex .contain_text .text1 {
@@ -1236,6 +1288,26 @@ header .struct .tools .btn_menu {
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 2px;
   color: #fffffffb;
+}
+
+@media all and (max-width: 1483px) {
+  .carouss .text_carouss .struct .flex .contain_text .text1 {
+    font: normal normal bold 4.5em/1.07em Poppins;
+  }
+}
+
+@media all and (max-width: 761px) {
+  .carouss .text_carouss .struct .flex .contain_text .text1 {
+    font: normal normal bold 3.5em/1.2em Poppins;
+  }
+}
+
+@media all and (max-width: 578px) {
+  .carouss .text_carouss .struct .flex .contain_text .text1 {
+    font: normal normal bold 2em/1.5em Poppins;
+    margin-bottom: 5px;
+    width: 90%;
+  }
 }
 
 .carouss .text_carouss .struct .flex .contain_text .text1:hover {
@@ -1256,6 +1328,13 @@ header .struct .tools .btn_menu {
   color: #B4B4B4;
 }
 
+@media all and (max-width: 578px) {
+  .carouss .text_carouss .struct .flex .contain_text .text2 {
+    font: normal normal normal 0.9em/1.5em Poppins;
+    width: 90%;
+  }
+}
+
 .carouss .text_carouss .struct .flex .contain_text .btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,6 +1343,16 @@ header .struct .tools .btn_menu {
       -ms-flex-pack: left;
           justify-content: left;
   margin-top: 40px;
+}
+
+@media all and (max-width: 489px) {
+  .carouss .text_carouss .struct .flex .contain_text .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
 }
 
 .carouss .text_carouss .struct .flex .contain_text .btns .btn {
@@ -1284,6 +1373,20 @@ header .struct .tools .btn_menu {
   font: normal normal normal 1.1em Poppins;
   letter-spacing: 0px;
   color: white;
+}
+
+@media all and (max-width: 761px) {
+  .carouss .text_carouss .struct .flex .contain_text .btns .btn {
+    font: normal normal normal 1em Poppins;
+    width: 25em;
+  }
+}
+
+@media all and (max-width: 489px) {
+  .carouss .text_carouss .struct .flex .contain_text .btns .btn {
+    width: 100%;
+    margin-bottom: 1em;
+  }
 }
 
 .carouss .text_carouss .struct .flex .contain_text .btns .active {

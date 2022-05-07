@@ -172,6 +172,11 @@ a {
 
     display: block;
     position: absolute;
+
+    @media all and (max-width:500px){
+      font: normal normal 200 12px/0px Poppins;
+       transform: translateX(-40px) translateY(20px) rotate(-90deg);
+    }
   }
   span {
     position: absolute;

@@ -210,16 +210,76 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+
+
+    var tl = new TimelineLite();
+    var tl2 = new TimelineLite();
+
+    tl.staggerTo(".wrapper div",0.5,{
+        x:0,
+        ease: Power1.easeInOut,
+      yoyo:true,
+     
+        stagger:{
+            from: 0,
+            each: 0.1
+        }
+    });
+    tl2.staggerTo(".menu_mobile .struct",0.7,{
+      
+        x:0,
+        ease: Power1.easeInOut,
+      yoyo:true,
+     
+        stagger:{
+            from: 0,
+            each: 0.1
+        }
+    });
+  
+    function wrapperOn (){
+        if(tl.progress() < 1){
+          tl.play();
+        } else {
+          tl.restart();
+        }
+      }
+
+      function wrapperOff(){
+        if(tl.progress() > 0){
+          tl.reverse();
+        } else {
+          tl.reverse(0); //reverses from the end
+        }
+      }
+
    
     // window.onload=function(){
     //     $('.menu_mobile').css('height',window.innerHeight+'px');
     //     console.log( $('.menu_mobile').css('height'));
     // }
     // $('.menu_mobile').css('height',window.innerHeight+'px');
+
+
+    menu_mobile_STATUS=0;
+
     $('body').on('click','.btn_menu',()=>{
+
         $('.menu_mobile').toggleClass('menu_mobile_off');
+
+        if(menu_mobile_STATUS==0){
+            wrapperOn();
+            menu_mobile_STATUS=1;
+        }else{
+            wrapperOff();
+            menu_mobile_STATUS=0;
+        }
+
+
     })
 
-  
+
+
+
 
 });

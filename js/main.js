@@ -215,6 +215,7 @@ $(document).ready(function () {
     var tl = new TimelineLite();
     var tl2 = new TimelineLite();
 
+
     tl.staggerTo(".wrapper div",0.5,{
         x:0,
         ease: Power1.easeInOut,

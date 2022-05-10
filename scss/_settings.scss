@@ -203,6 +203,11 @@ a {
     top: 0px;
     left: 0px;
     z-index: -1;
+
+    @media all and (max-width: 734px){
+      width: 100%;
+      height: 60%;
+    }
     &:before {
       position: absolute;
       top: 0px;
@@ -214,6 +219,11 @@ a {
       content: " ";
       background: transparent linear-gradient(90deg, #12131870 45%, #121318) 0%
         0% no-repeat padding-box;
+        @media all and (max-width: 734px){
+          background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
+          transform: translateY(10px);
+
+        }
     }
   }
 
@@ -240,6 +250,11 @@ a {
     .text_block {
       display: block;
       width: 65%;
+
+      @media all and (max-width: 734px){
+        width: 100%;
+      }
+
     }
 
     .text_block_small {
@@ -261,6 +276,9 @@ a {
         font: normal normal 300 1.2em/0px Poppins;
         color: #b4b4b4;
         margin-left: 10px;
+        @media all and (max-width:578px){
+          font: normal normal 300 1em/0px Poppins;
+        }
       }
     }
 
@@ -271,22 +289,32 @@ a {
       display: block;
       margin-top: 30px;
       margin-bottom: 20px;
-
-      // -webkit-text-stroke-color:white;
-      // -webkit-text-stroke-width:2px;
       color: #ffffff;
+
+      @media all and (max-width:989px){
+        font:normal normal bold 3em/1.3em Poppins;
+      }
+      @media all and (max-width:578px){
+        font:normal normal bold 2em/1.2em Poppins;
+        margin-top: 15px;
+      margin-bottom: 20px;
+      }
+
       .point {
         color: $cta;
         -webkit-text-stroke-width: 0px;
       }
     }
-
+   
     .text2 {
       display: block;
       font: normal normal 300 1.1em/1.5em Poppins;
       letter-spacing: 0px;
       color: #cecece;
       margin-bottom: 10px;
+      @media all and (max-width:578px){
+        font: normal normal normal 0.9em/1.5em Poppins;
+      }
     }
     .btn_more {
       display: inline-block;
@@ -297,7 +325,9 @@ a {
       padding-bottom: 5px;
       border-bottom: 0.1em solid $cta;
       position: relative;
-
+      @media all and (max-width:578px){
+      margin-top: 10px;
+      }
       &::before {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;

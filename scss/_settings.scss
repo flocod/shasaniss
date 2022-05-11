@@ -37,6 +37,8 @@ html {
   // cursor: none;
   position: relative;
 
+
+
   .cursor_container {
     position: fixed;
     top: 0px;
@@ -45,6 +47,9 @@ html {
     height: 100%;
     // background: #121318;
     // cursor style
+    @media all and (max-width:700px){
+      display: none;
+    }
   }
 
   .cursor {
@@ -59,6 +64,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media all and (max-width:700px){
+      display: none;
+    }
   }
 
   .contain_cursor {
@@ -74,6 +82,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media all and (max-width:700px){
+      display: none;
+    }
   }
 
   .pointer {
@@ -87,6 +98,9 @@ html {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    @media all and (max-width:700px){
+      display: none;
+    }
   }
 }
 
@@ -196,6 +210,10 @@ a {
   width: 100%;
   padding-top: 200px;
   padding-bottom: 200px;
+  @media all and (max-width:734px){
+    padding-top: 200px;
+    padding-bottom: 32px;
+  }
   .bg_img {
     height: 100%;
     width: 65%;
@@ -221,7 +239,10 @@ a {
         0% no-repeat padding-box;
         @media all and (max-width: 734px){
           background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
-          transform: translateY(10px);
+          transform: translateY(1px);
+          height: 65%;
+          top: auto;
+          bottom: 0;
 
         }
     }
@@ -236,6 +257,16 @@ a {
       content: " ";
       background: transparent linear-gradient(90deg, #121318, #12131870 45%) 0%
         0% no-repeat padding-box;
+
+        @media all and (max-width: 734px){
+          background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
+          transform: translateY(1px);
+          height: 65%;
+          top: auto;
+          bottom: 0;
+
+        }
+
     }
   }
 
@@ -259,6 +290,10 @@ a {
 
     .text_block_small {
       width: 50%;
+      @media all and (max-width: 1370px){
+        width: 100%;
+        margin-top: 20px;
+      }
     }
 
     .sub_text {
@@ -314,6 +349,7 @@ a {
       margin-bottom: 10px;
       @media all and (max-width:578px){
         font: normal normal normal 0.9em/1.5em Poppins;
+        text-align: justify;
       }
     }
     .btn_more {
@@ -348,6 +384,7 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
         .style_input {
           display: block;
@@ -362,6 +399,10 @@ a {
 
         .input_form {
           width: 48%;
+          @media all and (max-width: 734px){
+            width: 100%;
+            font: normal normal 400 0.9em/1em Poppins;
+          }
         }
       }
 
@@ -375,6 +416,10 @@ a {
         border-bottom: 0.09em solid #cecece;
         color: #b4b4b4;
         margin-top: 2em;
+        @media all and (max-width: 734px){
+         
+          font: normal normal 400 0.9em/1.4em Poppins;
+        }
       }
 
       .btn {
@@ -404,13 +449,25 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       margin-top: 5em;
       width: 100%;
+      @media all and (max-width:500px){
+       
+        margin-top: 2em;
+      }
 
       .item {
         width: 25%;
-        height: 30em;
+         @media all and (max-width:1335px){
+          width: 50%;
+          }
+         @media all and (max-width:500px){
+          width: 100%;
+         
+          }
 
+        height: 30em;
         transition: 0.3s ease;
         opacity: 1;
         display: flex;
@@ -442,6 +499,12 @@ a {
           border: 0.2em solid rgba(255, 81, 81, 0);
           background: #22252e;
           transition: 0.3s ease;
+          @media all and (max-width:700px){
+            width: 8.9em;
+          height: 8.9em;
+          }
+
+
           .content_1 {
             width: 80%;
             height: 80%;
@@ -456,6 +519,7 @@ a {
               border-radius: 50%;
               font-size: 2em;
               transition: 0.3s ease;
+              
             }
           }
         }
@@ -467,6 +531,14 @@ a {
           text-transform: uppercase;
           margin-top: 2em;
           margin-bottom: 2em;
+          @media all and (max-width:1335px){
+            margin-top: 1em;
+            margin-bottom: 1em;
+            }
+          @media all and (max-width:700px){
+            font: normal normal 300 1.2em/1.2em Poppins;
+          }
+
         }
 
         .more {
@@ -479,6 +551,10 @@ a {
           border-bottom: 0.1em solid $cta;
           position: relative;
           margin-top: 2em;
+          @media all and (max-width:1335px){
+            margin-top: 1em;
+    
+            }
         }
 
         &:hover {
@@ -531,6 +607,13 @@ a {
     align-items: flex-start;
   }
 
+.flex_box_numbers{
+  @media all and (max-width:1370px){
+    flex-direction: column;
+  }
+}
+
+
   .list_box {
     display: block;
     width: 100%;
@@ -567,9 +650,20 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 45%;
+    flex-wrap: wrap;
+    @media all and (max-width:1370px){
+      width: 100%;
+    }
+    
     .block_box {
       display: block;
       width: 48%;
+      @media all and (max-width:1370px){
+        width:49%;
+      }
+      @media all and (max-width:690px){
+        width: 100%;
+      }
       .item {
         width: 100%;
         height: 300px;
@@ -580,7 +674,10 @@ a {
         justify-content: center;
         align-items: center;
         flex-direction: row;
-
+        @media all and (max-width:1370px){
+         margin-bottom: 20px;
+        }
+        
         div {
           text-align: center;
           .numb {
@@ -629,10 +726,17 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      flex-wrap: wrap;
+
+
 
       .text_block {
         width: 60%;
         text-align: left;
+        @media all and (max-width:800px){
+          width: 1000%;
+          margin-bottom: 15px;
+        }
       }
     }
 
@@ -641,13 +745,20 @@ a {
       width: 100%;
       justify-content: space-between;
       margin-top: 3em;
-
+      @media all and (max-width:1249px){
+        flex-wrap: wrap;
+      }
+     
       .item {
         width: 33.5%;
         height: 20em;
         position: relative;
         transition: 0.3s ease;
         overflow: hidden;
+        @media all and (max-width:1249px){
+          width: 1000%;
+          height: 20em;
+        }
 
         cursor: pointer;
         img {

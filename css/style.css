@@ -38,6 +38,12 @@ html {
   height: 100%;
 }
 
+@media all and (max-width: 700px) {
+  .body .cursor_container {
+    display: none;
+  }
+}
+
 .body .cursor {
   position: fixed;
   top: 50%;
@@ -57,6 +63,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media all and (max-width: 700px) {
+  .body .cursor {
+    display: none;
+  }
 }
 
 .body .contain_cursor {
@@ -80,6 +92,12 @@ html {
           align-items: center;
 }
 
+@media all and (max-width: 700px) {
+  .body .contain_cursor {
+    display: none;
+  }
+}
+
 .body .pointer {
   position: fixed;
   width: 20px;
@@ -92,6 +110,12 @@ html {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
+}
+
+@media all and (max-width: 700px) {
+  .body .pointer {
+    display: none;
+  }
 }
 
 * {
@@ -220,6 +244,13 @@ a :hover {
   padding-bottom: 200px;
 }
 
+@media all and (max-width: 734px) {
+  .group {
+    padding-top: 200px;
+    padding-bottom: 32px;
+  }
+}
+
 .group .bg_img {
   height: 100%;
   width: 65%;
@@ -254,8 +285,11 @@ a :hover {
   .group .bg_img:before {
     background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
     background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+    height: 65%;
+    top: auto;
+    bottom: 0;
   }
 }
 
@@ -270,6 +304,18 @@ a :hover {
   content: " ";
   background: transparent -webkit-gradient(linear, left top, right top, from(#121318), color-stop(45%, #12131870)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(90deg, #121318, #12131870 45%) 0% 0% no-repeat padding-box;
+}
+
+@media all and (max-width: 734px) {
+  .group .bg_img_right:before {
+    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+    height: 65%;
+    top: auto;
+    bottom: 0;
+  }
 }
 
 .group .struct {
@@ -301,6 +347,13 @@ a :hover {
 
 .group .struct .text_block_small {
   width: 50%;
+}
+
+@media all and (max-width: 1370px) {
+  .group .struct .text_block_small {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 .group .struct .sub_text {
@@ -375,6 +428,7 @@ a :hover {
 @media all and (max-width: 578px) {
   .group .struct .text2 {
     font: normal normal normal 0.9em/1.5em Poppins;
+    text-align: justify;
   }
 }
 
@@ -422,6 +476,8 @@ a :hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .group .struct .form_devis .flex_input .style_input {
@@ -439,6 +495,13 @@ a :hover {
   width: 48%;
 }
 
+@media all and (max-width: 734px) {
+  .group .struct .form_devis .flex_input .input_form {
+    width: 100%;
+    font: normal normal 400 0.9em/1em Poppins;
+  }
+}
+
 .group .struct .form_devis textarea {
   width: 100%;
   height: 7em;
@@ -449,6 +512,12 @@ a :hover {
   border-bottom: 0.09em solid #cecece;
   color: #b4b4b4;
   margin-top: 2em;
+}
+
+@media all and (max-width: 734px) {
+  .group .struct .form_devis textarea {
+    font: normal normal 400 0.9em/1.4em Poppins;
+  }
 }
 
 .group .struct .form_devis .btn {
@@ -488,8 +557,16 @@ a :hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 5em;
   width: 100%;
+}
+
+@media all and (max-width: 500px) {
+  .group .struct .flex_services {
+    margin-top: 2em;
+  }
 }
 
 .group .struct .flex_services .item {
@@ -511,6 +588,18 @@ a :hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media all and (max-width: 1335px) {
+  .group .struct .flex_services .item {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .group .struct .flex_services .item {
+    width: 100%;
+  }
 }
 
 .group .struct .flex_services .item:nth-child(2n + 1) {
@@ -545,6 +634,13 @@ a :hover {
   transition: 0.3s ease;
 }
 
+@media all and (max-width: 700px) {
+  .group .struct .flex_services .item .item_icon {
+    width: 8.9em;
+    height: 8.9em;
+  }
+}
+
 .group .struct .flex_services .item .item_icon .content_1 {
   width: 80%;
   height: 80%;
@@ -574,6 +670,19 @@ a :hover {
   margin-bottom: 2em;
 }
 
+@media all and (max-width: 1335px) {
+  .group .struct .flex_services .item .item_titre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .group .struct .flex_services .item .item_titre {
+    font: normal normal 300 1.2em/1.2em Poppins;
+  }
+}
+
 .group .struct .flex_services .item .more {
   display: inline-block;
   color: #dc3d41;
@@ -584,6 +693,12 @@ a :hover {
   border-bottom: 0.1em solid #dc3d41;
   position: relative;
   margin-top: 2em;
+}
+
+@media all and (max-width: 1335px) {
+  .group .struct .flex_services .item .more {
+    margin-top: 1em;
+  }
 }
 
 .group .struct .flex_services .item:hover {
@@ -651,6 +766,15 @@ a :hover {
           align-items: flex-start;
 }
 
+@media all and (max-width: 1370px) {
+  .group .flex_box_numbers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .group .list_box {
   display: block;
   width: 100%;
@@ -702,11 +826,31 @@ a :hover {
       -ms-flex-align: center;
           align-items: center;
   width: 45%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media all and (max-width: 1370px) {
+  .group .box_numbers {
+    width: 100%;
+  }
 }
 
 .group .box_numbers .block_box {
   display: block;
   width: 48%;
+}
+
+@media all and (max-width: 1370px) {
+  .group .box_numbers .block_box {
+    width: 49%;
+  }
+}
+
+@media all and (max-width: 690px) {
+  .group .box_numbers .block_box {
+    width: 100%;
+  }
 }
 
 .group .box_numbers .block_box .item {
@@ -727,6 +871,12 @@ a :hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media all and (max-width: 1370px) {
+  .group .box_numbers .block_box .item {
+    margin-bottom: 20px;
+  }
 }
 
 .group .box_numbers .block_box .item div {
@@ -793,11 +943,20 @@ a :hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .last_projets .struct .bg_title_group .text_block {
   width: 60%;
   text-align: left;
+}
+
+@media all and (max-width: 800px) {
+  .last_projets .struct .bg_title_group .text_block {
+    width: 1000%;
+    margin-bottom: 15px;
+  }
 }
 
 .last_projets .struct .flex_projets {
@@ -811,6 +970,13 @@ a :hover {
   margin-top: 3em;
 }
 
+@media all and (max-width: 1249px) {
+  .last_projets .struct .flex_projets {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .last_projets .struct .flex_projets .item {
   width: 33.5%;
   height: 20em;
@@ -819,6 +985,13 @@ a :hover {
   transition: 0.3s ease;
   overflow: hidden;
   cursor: pointer;
+}
+
+@media all and (max-width: 1249px) {
+  .last_projets .struct .flex_projets .item {
+    width: 1000%;
+    height: 20em;
+  }
 }
 
 .last_projets .struct .flex_projets .item img {
@@ -1580,10 +1753,44 @@ header .struct .tools .btn_menu {
   width: 90%;
 }
 
+@media all and (max-width: 1369px) {
+  .footer .struct {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer .struct .item {
   display: block;
   text-align: left;
   width: 23%;
+}
+
+@media all and (max-width: 1369px) {
+  .footer .struct .item {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 1159px) {
+  .footer .struct .item {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .footer .struct .item {
+    width: 100%;
+  }
 }
 
 .footer .struct .item .logo_footer {
@@ -1642,6 +1849,12 @@ header .struct .tools .btn_menu {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 600px) {
+  .footer .sign::after {
+    font: normal normal 300 0.7em/0.6px Poppins;
+  }
 }
 
 .none {

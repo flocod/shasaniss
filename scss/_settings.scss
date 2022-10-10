@@ -208,15 +208,15 @@ a {
   align-items: center;
   position: relative;
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   @media all and (max-width:734px){
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 32px;
   }
   .bg_img {
     height: 100%;
-    width: 65%;
+    width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -240,7 +240,7 @@ a {
         @media all and (max-width: 734px){
           background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
           transform: translateY(1px);
-          height: 65%;
+          height: 100%;
           top: auto;
           bottom: 0;
 
@@ -349,7 +349,7 @@ a {
       margin-bottom: 10px;
       @media all and (max-width:578px){
         font: normal normal normal 0.9em/1.5em Poppins;
-        text-align: justify;
+        text-align: left;
       }
     }
     .btn_more {
@@ -609,7 +609,7 @@ a {
 
 .flex_box_numbers{
   @media all and (max-width:1370px){
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 

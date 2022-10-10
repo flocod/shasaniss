@@ -29,7 +29,6 @@ html {
   font-weight: 400;
   position: relative;
 }
-
 .body .cursor_container {
   position: fixed;
   top: 0px;
@@ -37,13 +36,11 @@ html {
   width: 100%;
   height: 100%;
 }
-
 @media all and (max-width: 700px) {
   .body .cursor_container {
     display: none;
   }
 }
-
 .body .cursor {
   position: fixed;
   top: 50%;
@@ -64,13 +61,11 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
-
 @media all and (max-width: 700px) {
   .body .cursor {
     display: none;
   }
 }
-
 .body .contain_cursor {
   position: fixed;
   top: 50%;
@@ -91,19 +86,17 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
-
 @media all and (max-width: 700px) {
   .body .contain_cursor {
     display: none;
   }
 }
-
 .body .pointer {
   position: fixed;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: white;
+  background: rgb(255, 255, 255);
   -webkit-filter: saturate(200%);
           filter: saturate(200%);
   top: 50%;
@@ -111,7 +104,6 @@ html {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-
 @media all and (max-width: 700px) {
   .body .pointer {
     display: none;
@@ -150,8 +142,8 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px black;
-          box-shadow: inset 0 0 6px black;
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+          box-shadow: inset 0 0 6px rgb(0, 0, 0);
   border: none;
   width: 0px;
   background-color: rgba(0, 0, 0, 0);
@@ -162,7 +154,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 a :hover {
   display: inline-block;
   text-decoration: none;
@@ -198,7 +189,6 @@ a :hover {
   height: 80px;
   width: 2px;
 }
-
 .scroll_indice:after {
   content: attr(value);
   font: normal normal 200 14px/0px Poppins;
@@ -209,7 +199,6 @@ a :hover {
   display: block;
   position: absolute;
 }
-
 @media all and (max-width: 500px) {
   .scroll_indice:after {
     font: normal normal 200 12px/0px Poppins;
@@ -217,7 +206,6 @@ a :hover {
             transform: translateX(-40px) translateY(20px) rotate(-90deg);
   }
 }
-
 .scroll_indice span {
   position: absolute;
   background-color: white;
@@ -240,33 +228,29 @@ a :hover {
           align-items: center;
   position: relative;
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-
 @media all and (max-width: 734px) {
   .group {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 32px;
   }
 }
-
 .group .bg_img {
   height: 100%;
-  width: 65%;
+  width: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: -1;
 }
-
 @media all and (max-width: 734px) {
   .group .bg_img {
     width: 100%;
     height: 60%;
   }
 }
-
 .group .bg_img:before {
   position: absolute;
   top: 0px;
@@ -277,39 +261,35 @@ a :hover {
           transform: translateX(0%);
   z-index: 0;
   content: " ";
-  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, #12131870), to(#121318)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(90deg, #12131870 45%, #121318) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, rgba(18, 19, 24, 0.4392156863)), to(#121318)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, rgba(18, 19, 24, 0.4392156863) 45%, #121318) 0% 0% no-repeat padding-box;
 }
-
 @media all and (max-width: 734px) {
   .group .bg_img:before {
-    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
-    background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
+    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(rgba(18, 19, 24, 0))) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, #121318 35%, rgba(18, 19, 24, 0)) 0% 0% no-repeat padding-box;
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
-    height: 65%;
+    height: 100%;
     top: auto;
     bottom: 0;
   }
 }
-
 .group .bg_img_right {
   left: auto;
   right: 0px;
 }
-
 .group .bg_img_right:before {
   right: auto;
   left: 0px;
   content: " ";
-  background: transparent -webkit-gradient(linear, left top, right top, from(#121318), color-stop(45%, #12131870)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(90deg, #121318, #12131870 45%) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#121318), color-stop(45%, rgba(18, 19, 24, 0.4392156863))) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #121318, rgba(18, 19, 24, 0.4392156863) 45%) 0% 0% no-repeat padding-box;
 }
-
 @media all and (max-width: 734px) {
   .group .bg_img_right:before {
-    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
-    background: transparent linear-gradient(0deg, #121318 35%, #12131800) 0% 0% no-repeat padding-box;
+    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(35%, #121318), to(rgba(18, 19, 24, 0))) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, #121318 35%, rgba(18, 19, 24, 0)) 0% 0% no-repeat padding-box;
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
     height: 65%;
@@ -317,7 +297,6 @@ a :hover {
     bottom: 0;
   }
 }
-
 .group .struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,29 +312,24 @@ a :hover {
   position: relative;
   z-index: 1;
 }
-
 .group .struct .text_block {
   display: block;
   width: 65%;
 }
-
 @media all and (max-width: 734px) {
   .group .struct .text_block {
     width: 100%;
   }
 }
-
 .group .struct .text_block_small {
   width: 50%;
 }
-
 @media all and (max-width: 1370px) {
   .group .struct .text_block_small {
     width: 100%;
     margin-top: 20px;
   }
 }
-
 .group .struct .sub_text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,27 +341,23 @@ a :hover {
       -ms-flex-pack: left;
           justify-content: left;
 }
-
 .group .struct .sub_text .tiret {
   display: inline-block;
   height: 0.15em;
   width: 4em;
   background: white;
 }
-
 .group .struct .sub_text .text {
   display: inline-block;
   font: normal normal 300 1.2em/0px Poppins;
   color: #b4b4b4;
   margin-left: 10px;
 }
-
 @media all and (max-width: 578px) {
   .group .struct .sub_text .text {
     font: normal normal 300 1em/0px Poppins;
   }
 }
-
 .group .struct .text1 {
   font: normal normal bold 4em/1.2em Poppins;
   letter-spacing: 0px;
@@ -397,13 +367,11 @@ a :hover {
   margin-bottom: 20px;
   color: #ffffff;
 }
-
 @media all and (max-width: 989px) {
   .group .struct .text1 {
     font: normal normal bold 3em/1.3em Poppins;
   }
 }
-
 @media all and (max-width: 578px) {
   .group .struct .text1 {
     font: normal normal bold 2em/1.2em Poppins;
@@ -411,12 +379,10 @@ a :hover {
     margin-bottom: 20px;
   }
 }
-
 .group .struct .text1 .point {
   color: #dc3d41;
   -webkit-text-stroke-width: 0px;
 }
-
 .group .struct .text2 {
   display: block;
   font: normal normal 300 1.1em/1.5em Poppins;
@@ -424,14 +390,12 @@ a :hover {
   color: #cecece;
   margin-bottom: 10px;
 }
-
 @media all and (max-width: 578px) {
   .group .struct .text2 {
     font: normal normal normal 0.9em/1.5em Poppins;
-    text-align: justify;
+    text-align: left;
   }
 }
-
 .group .struct .btn_more {
   display: inline-block;
   color: #dc3d41;
@@ -442,13 +406,11 @@ a :hover {
   border-bottom: 0.1em solid #dc3d41;
   position: relative;
 }
-
 @media all and (max-width: 578px) {
   .group .struct .btn_more {
     margin-top: 10px;
   }
 }
-
 .group .struct .btn_more::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -459,13 +421,11 @@ a :hover {
   -webkit-transform: translateX(150%) translateY(15%);
           transform: translateX(150%) translateY(15%);
 }
-
 .group .struct .form_devis {
   display: block;
   width: 100%;
   margin-top: 5em;
 }
-
 .group .struct .form_devis .flex_input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,7 +439,6 @@ a :hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .group .struct .form_devis .flex_input .style_input {
   display: block;
   margin-bottom: 3em;
@@ -490,18 +449,15 @@ a :hover {
   border-bottom: 0.09em solid #cecece;
   color: #b4b4b4;
 }
-
 .group .struct .form_devis .flex_input .input_form {
   width: 48%;
 }
-
 @media all and (max-width: 734px) {
   .group .struct .form_devis .flex_input .input_form {
     width: 100%;
     font: normal normal 400 0.9em/1em Poppins;
   }
 }
-
 .group .struct .form_devis textarea {
   width: 100%;
   height: 7em;
@@ -513,13 +469,11 @@ a :hover {
   color: #b4b4b4;
   margin-top: 2em;
 }
-
 @media all and (max-width: 734px) {
   .group .struct .form_devis textarea {
     font: normal normal 400 0.9em/1.4em Poppins;
   }
 }
-
 .group .struct .form_devis .btn {
   width: 100%;
   height: 4em;
@@ -541,12 +495,10 @@ a :hover {
   margin-top: 40px;
   cursor: pointer;
 }
-
 .group .struct .form_devis .active {
   background: #dc3d41;
   border: none;
 }
-
 .group .struct .flex_services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,13 +514,11 @@ a :hover {
   margin-top: 5em;
   width: 100%;
 }
-
 @media all and (max-width: 500px) {
   .group .struct .flex_services {
     margin-top: 2em;
   }
 }
-
 .group .struct .flex_services .item {
   width: 25%;
   height: 30em;
@@ -589,29 +539,24 @@ a :hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 @media all and (max-width: 1335px) {
   .group .struct .flex_services .item {
     width: 50%;
   }
 }
-
 @media all and (max-width: 500px) {
   .group .struct .flex_services .item {
     width: 100%;
   }
 }
-
-.group .struct .flex_services .item:nth-child(2n + 1) {
+.group .struct .flex_services .item:nth-child(2n+1) {
   background: transparent -webkit-gradient(linear, left top, left bottom, from(#181b25), to(#121318)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #181b25 0%, #121318 100%) 0% 0% no-repeat padding-box;
 }
-
 .group .struct .flex_services .item:nth-child(2n) {
   background: transparent -webkit-gradient(linear, left top, left bottom, from(#070911), to(#121318)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #070911 0%, #121318 100%) 0% 0% no-repeat padding-box;
 }
-
 .group .struct .flex_services .item .flex_center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -623,7 +568,6 @@ a :hover {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .group .struct .flex_services .item .item_icon {
   width: 12.9em;
   height: 12.9em;
@@ -633,14 +577,12 @@ a :hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 @media all and (max-width: 700px) {
   .group .struct .flex_services .item .item_icon {
     width: 8.9em;
     height: 8.9em;
   }
 }
-
 .group .struct .flex_services .item .item_icon .content_1 {
   width: 80%;
   height: 80%;
@@ -649,7 +591,6 @@ a :hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .group .struct .flex_services .item .item_icon .content_1 .container {
   width: 70%;
   height: 70%;
@@ -660,7 +601,6 @@ a :hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .group .struct .flex_services .item .item_titre {
   font: normal normal 300 1.6em/1.6em Poppins;
   letter-spacing: 0px;
@@ -669,20 +609,17 @@ a :hover {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
 @media all and (max-width: 1335px) {
   .group .struct .flex_services .item .item_titre {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
-
 @media all and (max-width: 700px) {
   .group .struct .flex_services .item .item_titre {
     font: normal normal 300 1.2em/1.2em Poppins;
   }
 }
-
 .group .struct .flex_services .item .more {
   display: inline-block;
   color: #dc3d41;
@@ -694,18 +631,15 @@ a :hover {
   position: relative;
   margin-top: 2em;
 }
-
 @media all and (max-width: 1335px) {
   .group .struct .flex_services .item .more {
     margin-top: 1em;
   }
 }
-
 .group .struct .flex_services .item:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .group .struct .flex_services .item:hover .item_icon {
   width: 12.9em;
   height: 12.9em;
@@ -715,7 +649,6 @@ a :hover {
   transition: 0.3s ease;
   background: rgba(255, 255, 255, 0);
 }
-
 .group .struct .flex_services .item:hover .item_icon .content_1 {
   width: 80%;
   height: 80%;
@@ -724,7 +657,6 @@ a :hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .group .struct .flex_services .item:hover .item_icon .content_1 .container {
   width: 70%;
   height: 70%;
@@ -735,7 +667,6 @@ a :hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .group .struct_left {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -744,7 +675,6 @@ a :hover {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-
 .group .lines_svg {
   display: block;
   position: absolute;
@@ -752,7 +682,6 @@ a :hover {
   top: 0%;
   width: 30%;
 }
-
 .group .struct_between {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -765,22 +694,19 @@ a :hover {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-
 @media all and (max-width: 1370px) {
   .group .flex_box_numbers {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
-
 .group .list_box {
   display: block;
   width: 100%;
   margin-top: 3em;
 }
-
 .group .list_box .list_item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,31 +716,26 @@ a :hover {
           align-items: flex-start;
   margin-bottom: 1em;
 }
-
 .group .list_box .list_item .ico {
   display: inline-block;
   color: #dc3d41;
   line-height: 0px;
   margin-top: 7px;
 }
-
 .group .list_box .list_item .text {
   display: block;
   margin-left: 10px;
 }
-
 .group .list_box .list_item .text b {
   font-weight: bold;
   font-size: 1.3em;
 }
-
 .group .list_box .list_item .text .descr {
   display: block;
   font-weight: 300;
   margin-top: 0.5em;
   color: #b4b4b4;
 }
-
 .group .box_numbers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,30 +750,25 @@ a :hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 @media all and (max-width: 1370px) {
   .group .box_numbers {
     width: 100%;
   }
 }
-
 .group .box_numbers .block_box {
   display: block;
   width: 48%;
 }
-
 @media all and (max-width: 1370px) {
   .group .box_numbers .block_box {
     width: 49%;
   }
 }
-
 @media all and (max-width: 690px) {
   .group .box_numbers .block_box {
     width: 100%;
   }
 }
-
 .group .box_numbers .block_box .item {
   width: 100%;
   height: 300px;
@@ -872,17 +788,14 @@ a :hover {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-
 @media all and (max-width: 1370px) {
   .group .box_numbers .block_box .item {
     margin-bottom: 20px;
   }
 }
-
 .group .box_numbers .block_box .item div {
   text-align: center;
 }
-
 .group .box_numbers .block_box .item div .numb {
   display: block;
   font: normal normal bold 5em/1em Montserrat;
@@ -890,7 +803,6 @@ a :hover {
   color: #f8f8f8;
   position: relative;
 }
-
 .group .box_numbers .block_box .item div .numb:after {
   content: "+";
   position: absolute;
@@ -899,11 +811,9 @@ a :hover {
   color: #dc3d41;
   font-size: 0.3em;
 }
-
 .group .box_numbers .block_box .item div .descr {
   font: normal normal normal 1.2em/1.5em Poppins;
 }
-
 .group .box_numbers .block_box .item:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -926,13 +836,11 @@ a :hover {
           align-items: center;
   background: #191c26;
 }
-
 .last_projets .struct {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
-
 .last_projets .struct .bg_title_group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -946,19 +854,16 @@ a :hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .last_projets .struct .bg_title_group .text_block {
   width: 60%;
   text-align: left;
 }
-
 @media all and (max-width: 800px) {
   .last_projets .struct .bg_title_group .text_block {
     width: 1000%;
     margin-bottom: 15px;
   }
 }
-
 .last_projets .struct .flex_projets {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -969,14 +874,12 @@ a :hover {
           justify-content: space-between;
   margin-top: 3em;
 }
-
 @media all and (max-width: 1249px) {
   .last_projets .struct .flex_projets {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-
 .last_projets .struct .flex_projets .item {
   width: 33.5%;
   height: 20em;
@@ -986,14 +889,12 @@ a :hover {
   overflow: hidden;
   cursor: pointer;
 }
-
 @media all and (max-width: 1249px) {
   .last_projets .struct .flex_projets .item {
     width: 1000%;
     height: 20em;
   }
 }
-
 .last_projets .struct .flex_projets .item img {
   position: absolute;
   top: 0px;
@@ -1003,7 +904,6 @@ a :hover {
   -webkit-filter: saturate(50%);
           filter: saturate(50%);
 }
-
 .last_projets .struct .flex_projets .item .text_item {
   position: absolute;
   top: 0px;
@@ -1012,8 +912,8 @@ a :hover {
   transition: 0.3s ease;
   width: 100%;
   height: 100%;
-  background: transparent -webkit-gradient(linear, left top, left bottom, from(#191c2691), to(#dc3d42c9)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(180deg, #191c2691 0%, #dc3d42c9 100%) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.568627451)), to(rgba(220, 61, 66, 0.7882352941))) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, rgba(25, 28, 38, 0.568627451) 0%, rgba(220, 61, 66, 0.7882352941) 100%) 0% 0% no-repeat padding-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1028,40 +928,33 @@ a :hover {
   opacity: 0;
   display: none;
 }
-
 .last_projets .struct .flex_projets .item .text_item__struct {
   width: 80%;
   text-align: left;
   margin-bottom: 4em;
 }
-
 .last_projets .struct .flex_projets .item .text_item__struct .small {
   font: normal normal 300 1em/1em Poppins;
   opacity: 0.7;
   margin-bottom: 8px;
 }
-
 .last_projets .struct .flex_projets .item .text_item__struct .categori {
   display: block;
   font: normal normal medium 1.3em/1.3em Poppins;
 }
-
 .last_projets .struct .flex_projets .item:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .last_projets .struct .flex_projets .item:hover .text_item {
   opacity: 1;
 }
-
 .last_projets .struct .flex_projets .item:hover img {
   -webkit-filter: saturate(400%);
           filter: saturate(400%);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .last_projets .struct .flex_projets .item:hover .text_item {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -1092,7 +985,6 @@ a :hover {
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
 }
-
 @media all and (max-width: 1168px) {
   .menu_mobile {
     display: -webkit-box;
@@ -1100,13 +992,11 @@ a :hover {
     display: flex;
   }
 }
-
 @media all and (max-width: 700px) {
   .menu_mobile {
     width: 100%;
   }
 }
-
 .menu_mobile .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1122,7 +1012,6 @@ a :hover {
   right: 0px;
   z-index: 2;
 }
-
 .menu_mobile .wrapper div {
   height: 15%;
   background: #dc3d41;
@@ -1133,7 +1022,6 @@ a :hover {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-
 .menu_mobile .struct {
   width: 75%;
   height: 80%;
@@ -1152,13 +1040,11 @@ a :hover {
   position: relative;
   z-index: 2;
 }
-
 .menu_mobile .struct ol {
   display: block;
   list-style-type: none;
   padding-left: 0px !important;
 }
-
 .menu_mobile .struct ol li {
   color: white;
   font-size: 1.5em;
@@ -1170,7 +1056,6 @@ a :hover {
   margin-bottom: 40px;
   position: relative;
 }
-
 @media all and (max-width: 700px) {
   .menu_mobile .struct ol li {
     font-size: 1.2em;
@@ -1178,7 +1063,6 @@ a :hover {
     width: 100%;
   }
 }
-
 .menu_mobile .struct ol li .line {
   display: inline-block;
   position: absolute;
@@ -1190,18 +1074,15 @@ a :hover {
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
 }
-
 .menu_mobile .struct ol li .active {
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
   width: 100%;
 }
-
 .menu_mobile .struct ol li:hover {
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
 }
-
 .menu_mobile .struct ol li:hover .line {
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
@@ -1236,7 +1117,6 @@ header {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 header .struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1249,24 +1129,20 @@ header .struct {
           align-items: center;
   width: 90%;
 }
-
 header .struct .logo {
   font-size: 1em;
   display: inline-block;
   color: white;
 }
-
 header .struct .nav {
   display: block;
   list-style-type: none;
 }
-
 @media all and (max-width: 1168px) {
   header .struct .nav {
     display: none;
   }
 }
-
 header .struct .nav li {
   display: inline-block;
   color: white;
@@ -1275,11 +1151,9 @@ header .struct .nav li {
   font-size: 1em;
   opacity: 0.6;
 }
-
 header .struct .nav .active {
   opacity: 1;
 }
-
 header .struct .tools {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1292,24 +1166,20 @@ header .struct .tools {
           align-items: center;
   color: white;
 }
-
 header .struct .tools .tel {
   font: normal normal 300 1em/0px Poppins;
   margin-right: 10px;
   display: inline-block;
 }
-
 @media all and (max-width: 677px) {
   header .struct .tools .tel {
     display: none;
   }
 }
-
 header .struct .tools .tel span {
   display: inline-block;
   margin-right: 3px;
 }
-
 header .struct .tools .social {
   display: inline-block;
   margin-left: 10px;
@@ -1317,11 +1187,9 @@ header .struct .tools .social {
   font-size: 1.3em;
   line-height: 0px;
 }
-
 header .struct .tools .btn_menu {
   display: none;
 }
-
 @media all and (max-width: 1168px) {
   header .struct .tools .btn_menu {
     display: inline-block;
@@ -1331,7 +1199,6 @@ header .struct .tools .btn_menu {
     z-index: 101;
   }
 }
-
 @media all and (max-width: 700px) {
   header .struct .tools .btn_menu {
     font-size: 1.5em;
@@ -1363,7 +1230,6 @@ header .struct .tools .btn_menu {
   position: relative;
   margin: 0;
 }
-
 .carouss .images {
   width: 60%;
   height: 100%;
@@ -1372,14 +1238,12 @@ header .struct .tools .btn_menu {
   position: relative;
   overflow: hidden;
 }
-
 @media all and (max-width: 700px) {
   .carouss .images {
     height: 45%;
     width: 100%;
   }
 }
-
 .carouss .images img {
   -webkit-filter: saturate(180%) brightness(120%);
           filter: saturate(180%) brightness(120%);
@@ -1389,23 +1253,21 @@ header .struct .tools .btn_menu {
   left: 0px;
   -webkit-transform: translateX(50%) scale(350%) skew(40deg);
           transform: translateX(50%) scale(350%) skew(40deg);
-  -webkit-transition: opacity 2s ease,-webkit-transform 2.5s ease;
-  transition: opacity 2s ease,-webkit-transform 2.5s ease;
-  transition: transform 2.5s ease,opacity 2s ease;
-  transition: transform 2.5s ease,opacity 2s ease,-webkit-transform 2.5s ease;
+  -webkit-transition: opacity 2s ease, -webkit-transform 2.5s ease;
+  transition: opacity 2s ease, -webkit-transform 2.5s ease;
+  transition: transform 2.5s ease, opacity 2s ease;
+  transition: transform 2.5s ease, opacity 2s ease, -webkit-transform 2.5s ease;
   opacity: 0;
 }
-
 .carouss .images .active {
   -webkit-transform: translateX(0%) scale(1) skew(0deg);
           transform: translateX(0%) scale(1) skew(0deg);
-  -webkit-transition: opacity 2s ease,-webkit-transform 5s ease;
-  transition: opacity 2s ease,-webkit-transform 5s ease;
-  transition: transform 5s ease,opacity 2s ease;
-  transition: transform 5s ease,opacity 2s ease,-webkit-transform 5s ease;
+  -webkit-transition: opacity 2s ease, -webkit-transform 5s ease;
+  transition: opacity 2s ease, -webkit-transform 5s ease;
+  transition: transform 5s ease, opacity 2s ease;
+  transition: transform 5s ease, opacity 2s ease, -webkit-transform 5s ease;
   opacity: 1;
 }
-
 .carouss:after {
   position: absolute;
   top: 0px;
@@ -1413,18 +1275,16 @@ header .struct .tools .btn_menu {
   width: 100%;
   height: 100%;
   content: " ";
-  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(90deg, #121318 45%, #12131800) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, #121318), to(rgba(18, 19, 24, 0))) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #121318 45%, rgba(18, 19, 24, 0)) 0% 0% no-repeat padding-box;
 }
-
 @media all and (max-width: 700px) {
   .carouss:after {
     height: 80%;
-    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(45%, #121318), to(#12131800)) 0% 0% no-repeat padding-box;
-    background: transparent linear-gradient(0deg, #121318 45%, #12131800) 0% 0% no-repeat padding-box;
+    background: transparent -webkit-gradient(linear, left bottom, left top, color-stop(45%, #121318), to(rgba(18, 19, 24, 0))) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, #121318 45%, rgba(18, 19, 24, 0)) 0% 0% no-repeat padding-box;
   }
 }
-
 .carouss:before {
   position: absolute;
   top: 0px;
@@ -1434,10 +1294,9 @@ header .struct .tools .btn_menu {
   -webkit-transform: translateX(-30%);
           transform: translateX(-30%);
   content: " ";
-  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, #12131800), to(#12131800)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(90deg, #12131800 45%, #12131800) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, right top, color-stop(45%, rgba(18, 19, 24, 0)), to(rgba(18, 19, 24, 0))) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, rgba(18, 19, 24, 0) 45%, rgba(18, 19, 24, 0)) 0% 0% no-repeat padding-box;
 }
-
 @media all and (max-width: 700px) {
   .carouss:before {
     top: auto;
@@ -1445,11 +1304,10 @@ header .struct .tools .btn_menu {
     height: 100%;
     -webkit-transform: translateX(0%) translateY(0%);
             transform: translateX(0%) translateY(0%);
-    background: #12131857;
+    background: rgba(18, 19, 24, 0.3411764706);
     z-index: 1;
   }
 }
-
 .carouss .text_carouss {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1470,13 +1328,11 @@ header .struct .tools .btn_menu {
   top: 0px;
   left: 0px;
 }
-
 .carouss .text_carouss .struct {
   display: block;
   width: 90%;
   position: relative;
 }
-
 .carouss .text_carouss .struct .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1486,43 +1342,36 @@ header .struct .tools .btn_menu {
           justify-content: left;
   width: 100%;
 }
-
 .carouss .text_carouss .struct .flex .contain_text {
   width: 50%;
   margin-top: 50px;
 }
-
 @media all and (max-width: 1483px) {
   .carouss .text_carouss .struct .flex .contain_text {
     width: 60%;
   }
 }
-
 @media all and (max-width: 1006px) {
   .carouss .text_carouss .struct .flex .contain_text {
     width: 80%;
   }
 }
-
 @media all and (max-width: 761px) {
   .carouss .text_carouss .struct .flex .contain_text {
     width: 90%;
   }
 }
-
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text {
     width: 100%;
   }
 }
-
 @media all and (max-width: 489px) {
   .carouss .text_carouss .struct .flex .contain_text {
     -webkit-transform: translateY(40px);
             transform: translateY(40px);
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .sub_text {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1534,33 +1383,28 @@ header .struct .tools .btn_menu {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .carouss .text_carouss .struct .flex .contain_text .sub_text .tiret {
   width: 60px;
   height: 0.1em;
   background: #b4b4b4;
   display: inline-block;
 }
-
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text .sub_text .tiret {
     width: 40px;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .sub_text .text {
   display: inline-block;
   font: normal normal 300 1.2em/0px Poppins;
   color: #b4b4b4;
   margin-left: 10px;
 }
-
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text .sub_text .text {
     font: normal normal 300 1em/0px Poppins;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .text1 {
   font: normal normal bold 5.5em/100px Poppins;
   letter-spacing: 0px;
@@ -1572,21 +1416,18 @@ header .struct .tools .btn_menu {
   transition: color 9s;
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 2px;
-  color: #fffffffb;
+  color: rgba(255, 255, 255, 0.9843137255);
 }
-
 @media all and (max-width: 1483px) {
   .carouss .text_carouss .struct .flex .contain_text .text1 {
     font: normal normal bold 4.5em/1.07em Poppins;
   }
 }
-
 @media all and (max-width: 761px) {
   .carouss .text_carouss .struct .flex .contain_text .text1 {
     font: normal normal bold 3.5em/1.2em Poppins;
   }
 }
-
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text .text1 {
     font: normal normal 400 2em/1.2em Poppins;
@@ -1594,32 +1435,27 @@ header .struct .tools .btn_menu {
     width: 90%;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .text1:hover {
-  color: #b4b4b400;
+  color: rgba(180, 180, 180, 0);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-
 .carouss .text_carouss .struct .flex .contain_text .text1 .point {
   color: #dc3d41;
   -webkit-text-stroke-width: 0px;
 }
-
 .carouss .text_carouss .struct .flex .contain_text .text2 {
   display: block;
   font: normal normal 300 1.1em/1.5em Poppins;
   letter-spacing: 0px;
   color: #B4B4B4;
 }
-
 @media all and (max-width: 578px) {
   .carouss .text_carouss .struct .flex .contain_text .text2 {
     font: normal normal normal 0.9em/1.5em Poppins;
     width: 90%;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1629,7 +1465,6 @@ header .struct .tools .btn_menu {
           justify-content: left;
   margin-top: 40px;
 }
-
 @media all and (max-width: 489px) {
   .carouss .text_carouss .struct .flex .contain_text .btns {
     -webkit-box-orient: vertical;
@@ -1639,7 +1474,6 @@ header .struct .tools .btn_menu {
     width: 100%;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .btns .btn {
   width: 15em;
   height: 4em;
@@ -1659,26 +1493,22 @@ header .struct .tools .btn_menu {
   letter-spacing: 0px;
   color: white;
 }
-
 @media all and (max-width: 761px) {
   .carouss .text_carouss .struct .flex .contain_text .btns .btn {
     font: normal normal normal 1em Poppins;
     width: 25em;
   }
 }
-
 @media all and (max-width: 489px) {
   .carouss .text_carouss .struct .flex .contain_text .btns .btn {
     width: 100%;
     margin-bottom: 1em;
   }
 }
-
 .carouss .text_carouss .struct .flex .contain_text .btns .active {
   background: #dc3d41;
   border: none;
 }
-
 .carouss .text_carouss .struct .state_carous {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1697,7 +1527,6 @@ header .struct .tools .btn_menu {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
 .carouss .text_carouss .struct .state_carous span {
   display: block;
   width: 50%;
@@ -1707,14 +1536,12 @@ header .struct .tools .btn_menu {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .carouss .text_carouss .struct .state_carous span:hover {
   width: 100%;
   background: white;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
 .carouss .text_carouss .struct .state_carous .active {
   width: 100%;
   background: white;
@@ -1742,7 +1569,6 @@ header .struct .tools .btn_menu {
   position: relative;
   z-index: 1;
 }
-
 .footer .struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1752,7 +1578,6 @@ header .struct .tools .btn_menu {
           justify-content: space-evenly;
   width: 90%;
 }
-
 @media all and (max-width: 1369px) {
   .footer .struct {
     -webkit-box-orient: vertical;
@@ -1767,78 +1592,65 @@ header .struct .tools .btn_menu {
             justify-content: center;
   }
 }
-
 .footer .struct .item {
   display: block;
   text-align: left;
   width: 23%;
 }
-
 @media all and (max-width: 1369px) {
   .footer .struct .item {
     width: 30%;
     margin-bottom: 30px;
   }
 }
-
 @media all and (max-width: 1159px) {
   .footer .struct .item {
     width: 80%;
   }
 }
-
 @media all and (max-width: 600px) {
   .footer .struct .item {
     width: 100%;
   }
 }
-
 .footer .struct .item .logo_footer {
   font-size: 1.3em;
   color: white;
   margin-bottom: 1.5em;
 }
-
 .footer .struct .item .title_footer {
   font-size: 1.3em;
   color: white;
   margin-bottom: 1.5em;
 }
-
 .footer .struct .item .descr_text {
-  font: normal normal 300 0.8em/1.4em Poppins;
+  font: normal normal 300 1em Poppins;
   opacity: 0.66;
 }
-
 .footer .struct .item .descr {
   font: normal normal 300 1em/1.4em Poppins;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 0.66;
 }
-
 .footer .struct .item .socials {
   display: block;
 }
-
 .footer .struct .item .socials span {
   font-size: 1.8em;
   color: white;
   margin-right: 1em;
 }
-
 .footer .struct .item .socials span:hover {
   color: #dc3d41;
 }
-
 .footer .sign {
   background: #dc3d41;
   width: 100%;
-  height: 4.5em;
+  height: 4em;
   margin-top: 4em;
   position: relative;
 }
-
 .footer .sign::after {
   content: attr(copyright);
   font: normal normal 300 1em/0px Poppins;
@@ -1850,7 +1662,6 @@ header .struct .tools .btn_menu {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
 @media all and (max-width: 600px) {
   .footer .sign::after {
     font: normal normal 300 0.7em/0.6px Poppins;

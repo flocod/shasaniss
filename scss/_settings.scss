@@ -3,6 +3,10 @@ $theme: #194056;
 $bg: #121318;
 $text: white;
 $cta: #dc3d41;
+// $theme: #194056;
+// $bg: #121318;
+// $text: white;
+// $cta: #dc3d41;
 //polices
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -863,7 +867,8 @@ a {
     z-index: 2;
 div{
 height: 15%;
-background: $cta;
+background: $bg;
+// background: $cta;
 width: 100%;
 transform: translateX(100%);
 flex-grow: 1;

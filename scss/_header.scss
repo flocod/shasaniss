@@ -20,6 +20,12 @@ header {
       font-size: 1em;
       display: inline-block;
       color: $text;
+      width: 100px;
+      img{
+        width: 100%;
+
+      }
+
     }
 
     .nav {

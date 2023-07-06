@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: right;
-  height:100vh;
+  height:100svh;
   position: relative;
   margin: 0;
  
@@ -222,6 +222,8 @@
 
             .active{
                 background: $cta;
+                background:linear-gradient(to left, #FF2828 0%,#008A4D);
+                fill: radial-gradient(3398.36% 68.34% at 37.08% 76.07%, #FF2828 0%, #FCC100 34.65%, #4EAC99 48.83%, #00A2DE 67.12%, #008A4D 100%);
                 border: none;
             }
         }
